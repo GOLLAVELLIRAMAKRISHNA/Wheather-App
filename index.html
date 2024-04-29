@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="wheather.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <p>Weather App</p>
+        </div>
+        <div class="input">
+            <input type="text" id="location-input" placeholder="Location.." />
+            <input type="button" value="Get" id="btn" onclick="getwheather()" />
+        </div>
+        <div class="info">
+            <img src="result-imgs/image.png" id="icon" />
+            <div class="temp">
+                <span id="temp-value">0</span>
+                <span id="unit">&#176</span>
+                <span id="c">C</span>
+            </div>
+            <div id="weather-desc">
+
+            </div>
+            <div id="location">
+
+            </div>
+        </div>
+    </div>
+    <div id="empty-popup-container" class="empty-popup-container">
+        <img src="result-imgs/x.png">
+        <h2>Sorry!</h2>
+        <p>Please Enter The <span id="span"></span> Location</p>
+        <button type="button" onclick="closepopup()">OK</button>
+    </div>
+
+    <script src="wheather.js"></script>
+</body>
+
+</html>
