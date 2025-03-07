@@ -6,38 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="wheather.css">
+    <link rel="stylesheet" href="./wheather.css" />
+    <script defer src="./defer.js"></script>
+    <script src="https://kit.fontawesome.com/2e8a04b08b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
     <div class="container">
-        <div class="title">
-            <p>Weather App</p>
-        </div>
-        <div class="input">
-            <input type="text" id="location-input" placeholder="Location.." />
-            <input type="button" value="Get" id="btn" onclick="getwheather()" />
-        </div>
-        <div class="info">
-            <img src="result-imgs/image.png" id="icon" />
-            <div class="temp">
-                <span id="temp-value">0</span>
-                <span id="unit">&#176</span>
-                <span id="c">C</span>
+        <main class="wheather-container">
+            <form class="form" id="form">
+                <input type="text" id="location-input" placeholder="Enter The Location..." />
+                <button title="Search" id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div>
+                <div class="wheather-img">
+                    <img id="wheather-img" src="" alt="">
+                </div>
+                <div class="main-wheather-details">
+                    <h1 id="temp"></h1>
+                    <div>
+                        <h3 id="name"></h3>
+                        <p id="feels"></p>
+                    </div>
+                    <p>Weather Description is <span id="desc"></span></p>
+                </div>
             </div>
-            <div id="weather-desc">
-
+        </main>
+        <section class="today-wheather">
+            <h1>Today's Highlights</h1>
+            <div class="boxes">
+                <div class="box">
+                    <h3>Humidity</h3>
+                    <i class="fa-solid fa-water"></i>
+                    <h2 id="humidity">30</h2>
+                </div>
+                <div class="box">
+                    <h3>Wind Speed</h3>
+                    <i class="fa-solid fa-wind"></i>
+                    <h2 id="wind">30</h2>
+                </div>
+                <div class="box">
+                    <h3>Clouds</h3>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2 id="cloud">30</h2>
+                </div>
+                <div class="box">
+                    <h3>Pressure</h3>
+                    <i class="fa-solid fa-volcano"></i>
+                    <h2 id="plessure"></h2>
+                </div>
+                <div class="box">
+                    <div class="sun">
+                        <i class="fa-solid fa-sun"></i>
+                        <div>
+                            <p id="suntime"></p>
+                            <p>Sunrise</p>
+                        </div>
+                    </div>
+                    <div class="sun">
+                        <i class="fa-regular fa-sun"></i>
+                        <div>
+                            <p id="settime"></p>
+                            <p>Sunset</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>Coordinates</h3>
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    <p id="lon"></p>
+                    <p id="lat"></p>
+                </div>
             </div>
-            <div id="location">
-
-            </div>
-        </div>
-    </div>
-    <div id="empty-popup-container" class="empty-popup-container">
-        <img src="result-imgs/x.png">
-        <h2>Sorry!</h2>
-        <p>Please Enter The <span id="span"></span> Location</p>
-        <button type="button" onclick="closepopup()">OK</button>
+        </section>
     </div>
 
     <script src="wheather.js"></script>
